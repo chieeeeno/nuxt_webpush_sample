@@ -5,12 +5,6 @@
       <h1 class="title">
         PWA Sample
       </h1>
-
-      <!--      <div class="links">-->
-      <!--        <button @click="addToHomeScreen" class="button&#45;&#45;green">-->
-      <!--          HOMEに追加-->
-      <!--        </button>-->
-      <!--      </div>-->
     </div>
   </div>
 </template>
@@ -22,48 +16,7 @@ export default {
   components: {
     Logo
   },
-  // data() {
-  //   return {
-  //     deferredPrompt: { type: String, default: '' }
-  //   }
-  // },
-  // mounted() {
-  //   window.addEventListener('beforeinstallprompt', (e) => {
-  //     console.log('beforeinstallprompt')
-  //     // Prevent Chrome 67 and earlier from automatically showing the prompt
-  //     e.preventDefault()
-  //     // Stash the event so it can be triggered later.
-  //     this.deferredPrompt = e
-  //     this.deferredPrompt.prompt()
-  //   })
-  // },
-  methods: {
-    addToHomeScreen() {
-      let deferredPrompt
-      console.log('Button is pressed! Show install banner.')
-      console.log(deferredPrompt)
-
-      window.addEventListener('beforeinstallprompt', (e) => {
-        console.log('beforeinstallprompt')
-        // Prevent Chrome 67 and earlier from automatically showing the prompt
-        e.preventDefault()
-        // Stash the event so it can be triggered later.
-        deferredPrompt = e
-        // deferredPrompt.prompt()
-        if (deferredPrompt) {
-          deferredPrompt.prompt()
-          deferredPrompt.userChoice.then(function(choiceResult) {
-            if (choiceResult.outcome === 'dismissed') {
-              console.log('User canncelled')
-            } else {
-              window.alert('Thank You!')
-            }
-          })
-          deferredPrompt = null
-        }
-      })
-    }
-  }
+  methods: {}
 }
 </script>
 
