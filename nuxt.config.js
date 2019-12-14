@@ -17,7 +17,12 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    script: [
+      {
+        src: 'https://sdk.push7.jp/v2/p7sdk.js'
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -30,7 +35,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [{ src: '~plugins/PushNotification.js', ssr: false }],
   /*
    ** Nuxt.js dev-modules
    */
