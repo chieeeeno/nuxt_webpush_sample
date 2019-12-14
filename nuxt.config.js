@@ -86,20 +86,20 @@ export default {
         type: 'image/png'
       }
     ]
-  },
-  workbox: {
-    swDest: 'static/sw.js',
-    runtimeCaching: [
-      {
-        urlPattern: baseUrl + '.*',
-        handler: 'staleWhileRevalidate',
-        strategyOptions: {
-          cacheName: 'my-cache',
-          cacheExpiration: {
-            maxAgeSeconds: 24 * 60 * 60 * 30
-          }
-        }
-      }
-    ]
   }
+  // workbox: {
+  //   // swDest: 'static/sw.js',
+  //   runtimeCaching: [
+  //     {
+  //       urlPattern: baseUrl + '.*',
+  //       handler: 'staleWhileRevalidate',
+  //       strategyOptions: {
+  //         cacheName: 'my-cache',
+  //         cacheExpiration: {
+  //           maxAgeSeconds: 24 * 60 * 60 * 30
+  //         }
+  //       }
+  //     }
+  //   ]
+  // }
 }
