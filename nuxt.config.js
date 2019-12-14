@@ -89,6 +89,8 @@ export default {
         sizes: '512x512',
         type: 'image/png'
       }
-    ]
+    ],
+    gcm_sender_id: '781205625909',
+    gcm_user_visible_only: true
   }
 }

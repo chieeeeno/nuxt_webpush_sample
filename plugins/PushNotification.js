@@ -10,16 +10,19 @@ class PushNotification {
       const doc = document
       const script = doc.createElement('script')
       script.async = false
-      script.src = `https://sdk.push7.jp/v2/p7sdk.js`
+      script.src = `https://aldebaran.push7.jp/ex-push7-worker.js`
       doc.body.appendChild(script)
       resolve()
     })
   }
   init(id) {
     const p7 = window.p7
-    p7.init(id).then(() => {
+    p7.init(id, {
+      mode: 'native',
+      subscribe: 'auto'
+    }).then(() => {
       console.log('初期化済み')
-      p7.subscribe()
+      // p7.subscribe()
     })
   }
 }
