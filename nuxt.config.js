@@ -39,12 +39,16 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
+    '@nuxtjs/style-resources',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv'
   ],
+  styleResources: {
+    scss: ['~/assets/scss/mixin.scss']
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options

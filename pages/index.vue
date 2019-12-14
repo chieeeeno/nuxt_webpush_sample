@@ -34,7 +34,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -52,6 +52,9 @@ export default {
   font-size: 100px;
   color: #35495e;
   letter-spacing: 1px;
+  @include sp-layout() {
+    font-size: 7vw;
+  }
 }
 
 .subtitle {
@@ -60,6 +63,9 @@ export default {
   color: #526488;
   word-spacing: 5px;
   padding-bottom: 15px;
+  @include sp-layout() {
+    font-size: 7vw;
+  }
 }
 
 .links {

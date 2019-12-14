@@ -1,0 +1,20 @@
+// pc表示
+@mixin pc-layout {
+  @media (min-width: 641px) {
+    @content;
+  }
+}
+
+// sp表示
+@mixin sp-layout {
+  @media (max-width: 640px) {
+    @content;
+  }
+}
+
+// tab表示
+@mixin tab-layout {
+  @media (min-width: 641px) and (max-width: 1000px) {
+    @content;
+  }
+}
