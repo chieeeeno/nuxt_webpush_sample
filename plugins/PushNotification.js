@@ -10,7 +10,7 @@ class PushNotification {
       const doc = document
       const script = doc.createElement('script')
       script.async = false
-      script.src = `https://aldebaran.push7.jp/ex-push7-worker.js`
+      script.src = `https://sdk.push7.jp/v2/p7sdk.js`
       doc.body.appendChild(script)
       resolve()
     })
