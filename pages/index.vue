@@ -6,11 +6,11 @@
         PWA Sample
       </h1>
 
-      <div class="links">
-        <button @click="addToHomeScreen" class="button--green">
-          HOMEに追加
-        </button>
-      </div>
+      <!--      <div class="links">-->
+      <!--        <button @click="addToHomeScreen" class="button&#45;&#45;green">-->
+      <!--          HOMEに追加-->
+      <!--        </button>-->
+      <!--      </div>-->
     </div>
   </div>
 </template>
