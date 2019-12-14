@@ -62,5 +62,28 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+
+  /*
+   ** PWAの設定
+   */
+  manifest: {
+    name: 'Nuxt.jsのPWA',
+    short_name: 'Nuxt PWA',
+    display: 'standalone',
+    theme_color: '#ff4a93',
+    background_color: '#ffdce6',
+    lang: 'ja',
+    start_url: '/dev/',
+    icons: [
+      {
+        src: 'static/icon.png',
+        sizes: '512x512',
+        type: 'image/png'
+      }
+    ]
+  },
+  workbox: {
+    swDest: 'static/sw.js'
   }
 }
