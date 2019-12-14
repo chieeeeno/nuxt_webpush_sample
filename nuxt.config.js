@@ -1,3 +1,7 @@
+const baseUrl =
+  process.env === 'PRODUCTION'
+    ? 'https://vigilant-montalcini-7e8e8c.netlify.com/'
+    : 'http://localhost:3000/'
 export default {
   mode: 'universal',
   /*
@@ -74,16 +78,28 @@ export default {
     theme_color: '#ff4a93',
     background_color: '#ffdce6',
     lang: 'ja',
-    start_url: '/dev/',
+    start_url: '/',
     icons: [
       {
-        src: 'static/icon.png',
+        src: '/icon.png',
         sizes: '512x512',
         type: 'image/png'
       }
     ]
   },
   workbox: {
-    swDest: 'static/sw.js'
+    swDest: 'static/sw.js',
+    runtimeCaching: [
+      {
+        urlPattern: baseUrl + '.*',
+        handler: 'staleWhileRevalidate',
+        strategyOptions: {
+          cacheName: 'my-cache',
+          cacheExpiration: {
+            maxAgeSeconds: 24 * 60 * 60 * 30
+          }
+        }
+      }
+    ]
   }
 }
