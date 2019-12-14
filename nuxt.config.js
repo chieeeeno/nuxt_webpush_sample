@@ -1,14 +1,13 @@
-const baseUrl =
-  process.env === 'PRODUCTION'
-    ? 'https://vigilant-montalcini-7e8e8c.netlify.com/'
-    : 'http://localhost:3000/'
 export default {
-  mode: 'pwa',
+  // server: {
+  //   host: '0.0.0.0'
+  // },
+  mode: 'spa',
   /*
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Nuxt.jsのPWA' || '',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -78,7 +77,7 @@ export default {
     theme_color: '#ff4a93',
     background_color: '#ffdce6',
     lang: 'ja',
-    start_url: '/',
+    start_url: '/?mode=standalone',
     icons: [
       {
         src: '/icon.png',
@@ -87,19 +86,4 @@ export default {
       }
     ]
   }
-  // workbox: {
-  //   // swDest: 'static/sw.js',
-  //   runtimeCaching: [
-  //     {
-  //       urlPattern: baseUrl + '.*',
-  //       handler: 'staleWhileRevalidate',
-  //       strategyOptions: {
-  //         cacheName: 'my-cache',
-  //         cacheExpiration: {
-  //           maxAgeSeconds: 24 * 60 * 60 * 30
-  //         }
-  //       }
-  //     }
-  //   ]
-  // }
 }
