@@ -16,7 +16,11 @@ class PushNotification {
     })
   }
   init(id) {
-    window.p7.init(id)
+    const p7 = window.p7
+    p7.init(id).then(() => {
+      console.log('初期化済み')
+      p7.subscribe()
+    })
   }
 }
 
