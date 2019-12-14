@@ -3,7 +3,7 @@ const baseUrl =
     ? 'https://vigilant-montalcini-7e8e8c.netlify.com/'
     : 'http://localhost:3000/'
 export default {
-  mode: 'universal',
+  mode: 'pwa',
   /*
    ** Headers of the page
    */

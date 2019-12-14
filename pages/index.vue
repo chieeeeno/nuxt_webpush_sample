@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     addToHomeScreen() {
-      console.log('addToHomeScreen')
+      // console.log('addToHomeScreen')
     }
   }
 }
