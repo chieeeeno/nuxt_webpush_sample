@@ -28,9 +28,6 @@ class PushNotification {
 }
 
 export default (ctx, inject) => {
-  // 本番環境以外は動かさない)
-  // if (process.env.NODE_ENV !== 'production') return
   const $push7 = new PushNotification('14ae4fb81ebd4aadb6581bdd1842e3e2')
-  // 今後の拡張のためinjectして、すべてのコンポーネントで使えるようにする
   inject('push7', $push7)
 }
