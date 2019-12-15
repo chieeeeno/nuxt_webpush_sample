@@ -5,6 +5,12 @@
       <h1 class="title">
         PWA Sample
       </h1>
+      <p v-if="isStandalone">
+        PWAモードです
+      </p>
+      <p v-else>
+        通常モードです
+      </p>
     </div>
   </div>
 </template>
@@ -15,6 +21,14 @@ import Logo from '~/components/Logo.vue'
 export default {
   components: {
     Logo
+  },
+  data() {
+    return {
+      isStandalone: { type: Boolean, default: false }
+    }
+  },
+  mounted() {
+    this.isStandalone = this.$route.query.mode === 'pwa'
   },
   methods: {}
 }

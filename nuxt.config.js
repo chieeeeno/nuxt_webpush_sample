@@ -82,7 +82,7 @@ export default {
     theme_color: '#ff4a93',
     background_color: '#ffdce6',
     lang: 'ja',
-    start_url: '/?mode=standalone',
+    start_url: '/?mode=pwa',
     icons: [
       {
         src: '/icon.png',
